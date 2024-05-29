@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Fraud Detection Form</h1>
+        <form id="fraudForm">
+            <div class="form-group">
+                <label for="amt_income_total">AMT_INCOME_TOTAL:</label>
+                <input type="text" id="amt_income_total" name="AMT_INCOME_TOTAL" required>
+            </div>
+            <div class="form-group">
+                <label for="amt_credit">AMT_CREDIT:</label>
+                <input type="text" id="amt_credit" name="AMT_CREDIT" required>
+            </div>
+            <div class="form-group">
+                <label for="days_last_phone_change">DAYS_LAST_PHONE_CHANGE:</label>
+                <input type="text" id="days_last_phone_change" name="DAYS_LAST_PHONE_CHANGE" required>
+            </div>
+            <div class="form-group">
+                <label for="name_contract_type">NAME_CONTRACT_TYPE:</label>
+                <select id="name_contract_type" name="NAME_CONTRACT_TYPE" required>
+                    <option value="Cash loans">Cash loans</option>
+                    <option value="Revolving loans">Revolving loans</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="code_gender">CODE_GENDER:</label>
+                <select id="code_gender" name="CODE_GENDER" required>
+                    <option value="M">M</option>
+                    <option value="F">F</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="flag_own_car">FLAG_OWN_CAR:</label>
+                <select id="flag_own_car" name="FLAG_OWN_CAR" required>
+                    <option value="Y">Y</option>
+                    <option value="N">N</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="name_education_type">NAME_EDUCATION_TYPE:</label>
+                <select id="name_education_type" name="NAME_EDUCATION_TYPE" required>
+                    <option value="Secondary / secondary special">Secondary / secondary special</option>
+                    <option value="Higher education">Higher education</option>
+                    <option value="Incomplete higher">Incomplete higher</option>
+                    <option value="Lower secondary">Lower secondary</option>
+                    <option value="Academic degree">Academic degree</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="occupation_type">OCCUPATION_TYPE:</label>
+                <select id="occupation_type" name="OCCUPATION_TYPE" required>
+                    <option value="Laborers">Laborers</option>
+                    <option value="Core staff">Core staff</option>
+                    <option value="Managers">Managers</option>
+                    <option value="Drivers">Drivers</option>
+                    <option value="Sales staff">Sales staff</option>
+                    <option value="Accountants">Accountants</option>
+                    <option value="High skill tech staff">High skill tech staff</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <button type="submit">Check for Fraud</button>
+        </form>
+        <div id="result" style="margin-top: 20px; text-align: center;"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
